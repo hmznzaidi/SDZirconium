@@ -3,7 +3,7 @@
     <div class="section-header text-center">
 
       <h2><span>Find Your </span>Membership Plan <span>today!</span></h2>
-      <p>Build your world of stardom with a custamizable membership plan starting at just RM60!</p>
+      <p>Get your free gifts, vouchers, lucky draw & many more!</p>
     </div>
     <div class="row">
 

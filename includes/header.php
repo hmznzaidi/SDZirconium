@@ -4,9 +4,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-2">
-          <div class="logo"> <a href="home.php"><img src="assets/images/mlogo.png" width="60" height="80" alt="image"/></a> </div>
+          <div class="logo"> <a href="home.php"><img src="assets/images/Logo.png" width="200px" height="200px" alt="image"/></a> </div>
         </div>
-        <div style="padding-top:30px; margin-bottom:-100px;" > <h1>24-Hours <span style="color:black" >Gym</span></h1></div>
+        <div style="padding-top:80px; padding-left: 300px" > <h1>ZIRCONIUM <span style="color:black" ></span></h1></div>
         <div class="col-sm-9 col-md-10"> 
           <div class="header_info">
             <div class="header_widgets">
@@ -70,12 +70,14 @@ foreach($results as $result)
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
-          <li><a href="home.php">Home</a>    </li>
+          <li><a href="home.php">Promotions</a></li>
+          <li><a href="car-listing.php">Shop Now</a>
           <li><a href="car-listing.php">Memberships</a>
+          <li><a href="car-listing.php">Hire Me!</a>
           <li><a href="page.php?type=aboutus">About Us</a></li>
 
           <!-- <li><a href="page.php?type=faqs">Assignment 1</a></li> -->
-          <li><a href="contact-us.php">Contact Us</a></li>
+          <li><a href="contact-us.php">Customer Service</a></li>
 
         </ul>
       </div>

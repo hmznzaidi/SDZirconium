@@ -16,7 +16,7 @@
     <script data-ad-client="ca-pub-2432708023082860" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <meta charset="utf-8">
-    <title>24-Hours Gym </title>
+    <title>ZIRCONIUM</title>
     <link rel="icon" href="../assets/img/2020.png">
     <link rel="stylesheet" href="hello.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -33,12 +33,12 @@
                 <div class="side"></div>
             </div>
             <div class="text">
-                <div class="text--backing">24HOURSGYM</div>
+                <div class="text--backing">ZIRCONIUM</div>
                 <div class="text--left">
-                    <div class="inner">24HOURSGYM</div>
+                    <div class="inner">ZIRCONIUM</div>
                 </div>
                 <div class="text--right">
-                    <div class="inner">24HOURSGYM</div>
+                    <div class="inner">ZIRCONIUM</div>
                 </div>
             </div>
         </div>

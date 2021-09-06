@@ -13,7 +13,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>24-Hours Gym</title>
+<title>ZIRCONIUM</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -43,9 +43,8 @@ error_reporting(0);
       <div class="row">
         <div class="col-md-5 col-md-push-7">
           <div class="banner_content">
-            <h1>Get Fit Now <br> with our memberships</h1>
-            <p>Without pain there is no gain!
-            <br>Achieve your goals, Enjoy Training, and Live A Better Life.
+            <h1>Welcome to Zirconium <br> with our memberships</h1>
+            <p>You can have lots of benefits with <br> vouchers, daily Newsletter & many more!
             </p>
         </div>  
       </div>
@@ -59,15 +58,15 @@ error_reporting(0);
   <div class="container">
     <div class="section-header text-center">
 
-      <h2><span>Find Your </span>Membership Plan <span>today!</span></h2>
-      <p>Build your world of stardom with a custamizable membership plan starting at just RM60!</p>
+      <h2><span>Get your </span>promotions <span>today!</span></h2>
+      <p>with free vouchers for our new members.</p>
     </div>
     <div class="row">
 
       <!-- Nav tabs -->
       <div class="recent-tab">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Membership plans</a></li>
+          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Promotions</a></li>
         </ul>
       </div>
       <!-- Recently Listed New -->
