@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2021 at 03:12 PM
--- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1
+-- Generation Time: Sep 06, 2021 at 04:46 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,14 +27,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
   `UserName` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
-  `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -49,18 +47,16 @@ INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 -- Table structure for table `tblbooking`
 --
 
-DROP TABLE IF EXISTS `tblbooking`;
-CREATE TABLE IF NOT EXISTS `tblbooking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblbooking` (
+  `id` int(11) NOT NULL,
   `userEmail` varchar(100) DEFAULT NULL,
   `VehicleId` int(11) DEFAULT NULL,
   `FromDate` varchar(20) DEFAULT NULL,
   `ToDate` varchar(20) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
   `Status` int(11) DEFAULT NULL,
-  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblbooking`
@@ -69,7 +65,9 @@ CREATE TABLE IF NOT EXISTS `tblbooking` (
 INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
 (1, 'random1@gmail.com', 1, '27/2/2021', '29/2/2021', 'I love this car', 2, '2021-02-27 11:24:44'),
 (2, 'random1@gmail.com', 2, '27/2/2021', '29/2/2021', 'ya', 1, '2021-02-27 15:02:18'),
-(3, 'random1@gmail.com', 4, '27/2/2021', '29/2/2021', '444', 2, '2021-02-27 15:02:31');
+(3, 'random1@gmail.com', 4, '27/2/2021', '29/2/2021', '444', 2, '2021-02-27 15:02:31'),
+(4, 'danielyusoff08@gmail.com', 4, '3/18/2021', '3/18/2023', 'I want to be slim!!!!', 1, '2021-03-18 05:53:51'),
+(5, 'danielyusoff081201@gmail.com', 4, '3/18/2021', '3/18/2023', 'Dy081201', 0, '2021-09-06 07:52:42');
 
 -- --------------------------------------------------------
 
@@ -77,22 +75,21 @@ INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, 
 -- Table structure for table `tblbrands`
 --
 
-DROP TABLE IF EXISTS `tblbrands`;
-CREATE TABLE IF NOT EXISTS `tblbrands` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblbrands` (
+  `id` int(11) NOT NULL,
   `BrandName` varchar(120) NOT NULL,
-  `CreationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `CreationDate` timestamp NULL DEFAULT current_timestamp(),
+  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblbrands`
 --
 
 INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALUES
-(1, 'BMW', '2021-02-26 16:51:12', NULL),
-(2, 'Aston Martin', '2021-02-27 10:41:14', NULL);
+(1, '+', '2021-03-17 09:28:47', NULL),
+(2, 'Max +', '2021-03-17 09:29:00', '2021-03-17 09:29:20'),
+(3, 'Pro Max +', '2021-03-17 09:29:05', '2021-03-17 09:29:24');
 
 -- --------------------------------------------------------
 
@@ -100,21 +97,19 @@ INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALU
 -- Table structure for table `tblcontactusinfo`
 --
 
-DROP TABLE IF EXISTS `tblcontactusinfo`;
-CREATE TABLE IF NOT EXISTS `tblcontactusinfo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Address` tinytext,
+CREATE TABLE `tblcontactusinfo` (
+  `id` int(11) NOT NULL,
+  `Address` tinytext DEFAULT NULL,
   `EmailId` varchar(255) DEFAULT NULL,
-  `ContactNo` char(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `ContactNo` char(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblcontactusinfo`
 --
 
 INSERT INTO `tblcontactusinfo` (`id`, `Address`, `EmailId`, `ContactNo`) VALUES
-(1, 'New Asgard', 'john@gmail.com', '7525724672');
+(1, 'Bukit Jalil, Kuala Lumpur, Malaysia', 'danielyusoff08@gmail.com', '+60 13-317-');
 
 -- --------------------------------------------------------
 
@@ -122,78 +117,22 @@ INSERT INTO `tblcontactusinfo` (`id`, `Address`, `EmailId`, `ContactNo`) VALUES
 -- Table structure for table `tblcontactusquery`
 --
 
-DROP TABLE IF EXISTS `tblcontactusquery`;
-CREATE TABLE IF NOT EXISTS `tblcontactusquery` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblcontactusquery` (
+  `id` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `EmailId` varchar(120) DEFAULT NULL,
   `ContactNumber` char(11) DEFAULT NULL,
-  `Message` longtext,
-  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `Message` longtext DEFAULT NULL,
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblcontactusquery`
 --
 
 INSERT INTO `tblcontactusquery` (`id`, `name`, `EmailId`, `ContactNumber`, `Message`, `PostingDate`, `status`) VALUES
-(1, 'name', 'random1@gmail.com', '999', 'I am so happy', '2021-02-26 16:58:05', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblpages`
---
-
-DROP TABLE IF EXISTS `tblpages`;
-CREATE TABLE IF NOT EXISTS `tblpages` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `PageName` varchar(255) DEFAULT NULL,
-  `type` varchar(255) NOT NULL DEFAULT '',
-  `detail` longtext NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblpages`
---
-
-INSERT INTO `tblpages` (`id`, `PageName`, `type`, `detail`) VALUES
-(1, 'Terms and Conditions', 'terms', ''),
-(2, 'Privacy Policy', 'privacy', 'Privacy'),
-(3, 'About Us ', 'aboutus', '										Hello there, we are from Group 3 Section 40. This is our group project.'),
-(4, 'FAQs', 'faqs', 'Hello World');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblusers`
---
-
-DROP TABLE IF EXISTS `tblusers`;
-CREATE TABLE IF NOT EXISTS `tblusers` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `FullName` varchar(120) DEFAULT NULL,
-  `EmailId` varchar(100) DEFAULT NULL,
-  `Password` varchar(100) DEFAULT NULL,
-  `ContactNo` char(11) DEFAULT NULL,
-  `dob` varchar(100) DEFAULT NULL,
-  `Address` varchar(255) DEFAULT NULL,
-  `City` varchar(100) DEFAULT NULL,
-  `Country` varchar(100) DEFAULT NULL,
-  `RegDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblusers`
---
-
-INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `dob`, `Address`, `City`, `Country`, `RegDate`, `UpdationDate`) VALUES
-(1, 'random', 'random1@gmail.com', 'a583ed37a4e1a34ef8754c3810c5f4f2', '012345678', NULL, NULL, NULL, NULL, '2021-02-26 16:50:21', NULL);
+(1, 'Daniel Yusoff', 'danielyusoff08@gmail.com', '013-317-410', 'Other members should do something!', '2021-02-26 16:58:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -201,12 +140,11 @@ INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `d
 -- Table structure for table `tblmemberships`
 --
 
-DROP TABLE IF EXISTS `tblmemberships`;
-CREATE TABLE IF NOT EXISTS `tblmemberships` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tblmemberships` (
+  `id` int(11) NOT NULL,
   `VehiclesTitle` varchar(150) DEFAULT NULL,
   `VehiclesBrand` int(11) DEFAULT NULL,
-  `VehiclesOverview` longtext,
+  `VehiclesOverview` longtext DEFAULT NULL,
   `PricePerDay` float DEFAULT NULL,
   `FuelType` varchar(100) DEFAULT NULL,
   `ModelYear` int(6) DEFAULT NULL,
@@ -228,20 +166,174 @@ CREATE TABLE IF NOT EXISTS `tblmemberships` (
   `CentralLocking` int(11) DEFAULT NULL,
   `CrashSensor` int(11) DEFAULT NULL,
   `LeatherSeats` int(11) DEFAULT NULL,
-  `RegDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `RegDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblmemberships`
 --
 
 INSERT INTO `tblmemberships` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
-(1, 'G20 530i', 1, 'This is a family sedan made by BMW', 3000, '+', 2020, 5, '1.jpg', '3.jpg', '2.jpg', '4.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2021-02-27 10:22:40', '2021-02-27 10:55:23'),
-(2, 'DB11', 2, 'Luxury', 5000, '+', 2018, 4, '5.jpg', '6.jpg', '7.jpg', '8.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2021-02-27 10:45:25', '2021-02-27 10:57:07'),
-(3, 'G12 740LE', 1, 'A luxury car that have PHEV mode', 4000, '+', 2019, 5, 'bmw 71.jpg', 'bmw 72.jpg', 'bmw 73.jpg', 'bmw 74.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2021-02-27 11:17:51', NULL),
-(4, 'Continental GT V8', 3, 'A luxury sports car ', 6000, '+', 2020, 4, 'bentley gt 1.jpg', 'Bentley gt 2.jpg', 'bentley gt 3.jpg', 'bentley gt 4.jpg', '', 1, 1, 1, NULL, 1, 1, 1, 1, NULL, 1, NULL, 1, '2021-02-27 11:36:09', NULL);
+(1, 'Bronze', 1, 'The best package for those who are new to the gym!', 60, '+', 2, 2, 'bronze.jpg', 'bronze.jpg', 'bronze.jpg', 'bronze.jpg', '', NULL, 1, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-03-18 05:15:51', NULL),
+(2, 'Silver', 1, 'This package gives you 3 guest capacity wtih free towel!', 80, '+', 2, 3, 'silver.jpg', 'silver.jpg', 'silver.jpg', 'silver.jpg', '', NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-03-18 05:17:20', '2021-03-18 05:19:48'),
+(3, 'Gold', 1, 'The premium package gives you access to sauna and other free gifts!', 100, '+', 2, 4, 'gold.jpg', 'gold.jpg', 'gold.jpg', 'gold.jpg', '', NULL, NULL, NULL, 1, NULL, NULL, 1, NULL, 1, 1, NULL, 1, '2021-03-18 05:18:52', NULL),
+(4, 'Platinum', 1, 'This luxury package gives every access to the gym with private sauna & personal trainer.', 150, '+', 2, 5, 'platinum.jpg', 'platinum.jpg', 'platinum.jpg', 'platinum.jpg', '', 1, NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, NULL, '2021-03-18 05:22:00', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblpages`
+--
+
+CREATE TABLE `tblpages` (
+  `id` int(11) NOT NULL,
+  `PageName` varchar(255) DEFAULT NULL,
+  `type` varchar(255) NOT NULL DEFAULT '',
+  `detail` longtext NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblpages`
+--
+
+INSERT INTO `tblpages` (`id`, `PageName`, `type`, `detail`) VALUES
+(1, 'Terms and Conditions', 'terms', ''),
+(2, 'Privacy Policy', 'privacy', 'Privacy'),
+(3, 'About Us ', 'aboutus', '										Hello there, i\'m Lito from Group 3 Section 40. This is my group project. The project is about building a web that can function as a gym management system & also at the same time a gym booking system. It is connected to the database & functions very well. I used phpmyadmin as the database and for the coding is used multiple languages such as php, html, sql, java, & javascript in order for everything to work. I used a minimalistic design yet informative so that it is easy to operate. If you noticed, i used a touched of canvas oil painting art for the background. The idea is to create a painting background on the membership card based on what packages they choose. I think this is very unique to this industry. Finally, i hope that you are able to enjoy my website!'),
+(4, 'FAQs', 'faqs', 'Hello World');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblusers`
+--
+
+CREATE TABLE `tblusers` (
+  `id` int(11) NOT NULL,
+  `FullName` varchar(120) DEFAULT NULL,
+  `EmailId` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  `ContactNo` char(11) DEFAULT NULL,
+  `dob` varchar(100) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `City` varchar(100) DEFAULT NULL,
+  `Country` varchar(100) DEFAULT NULL,
+  `RegDate` timestamp NULL DEFAULT current_timestamp(),
+  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblusers`
+--
+
+INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `dob`, `Address`, `City`, `Country`, `RegDate`, `UpdationDate`) VALUES
+(1, 'Daniel Yusoff', 'danielyusoff08@gmail.com', '202cb962ac59075b964b07152d234b70', '0133174100', '08/12/2001', 'Casa Green, Jalan Apenentah Dah Tak Ingat,', 'Kuala Lumpur', 'Malaysia', '2021-03-18 05:41:06', '2021-03-18 16:16:25'),
+(3, 'Lito', 'danielyusoff081201@gmail.com', 'e7ef31af97f4c58006e4a917bffbefd4', '0133174100', NULL, NULL, NULL, NULL, '2021-09-06 07:50:44', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblbooking`
+--
+ALTER TABLE `tblbooking`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblbrands`
+--
+ALTER TABLE `tblbrands`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblcontactusinfo`
+--
+ALTER TABLE `tblcontactusinfo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblcontactusquery`
+--
+ALTER TABLE `tblcontactusquery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblmemberships`
+--
+ALTER TABLE `tblmemberships`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblpages`
+--
+ALTER TABLE `tblpages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblusers`
+--
+ALTER TABLE `tblusers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblbooking`
+--
+ALTER TABLE `tblbooking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tblbrands`
+--
+ALTER TABLE `tblbrands`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tblcontactusinfo`
+--
+ALTER TABLE `tblcontactusinfo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblcontactusquery`
+--
+ALTER TABLE `tblcontactusquery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblmemberships`
+--
+ALTER TABLE `tblmemberships`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tblpages`
+--
+ALTER TABLE `tblpages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `tblusers`
+--
+ALTER TABLE `tblusers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

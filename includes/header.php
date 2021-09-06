@@ -6,7 +6,7 @@
         <div class="col-sm-3 col-md-2">
           <div class="logo"> <a href="home.php"><img src="assets/images/Logo.png" width="200px" height="200px" alt="image"/></a> </div>
         </div>
-        <div style="padding-top:80px; padding-left: 300px" > <h1>ZIRCONIUM <span style="color:black" ></span></h1></div>
+        <div style="padding-top:90px; padding-left: 300px" > <h3>ZIRCONIUM <span style="color:black" ></span></h3></div>
         <div class="col-sm-9 col-md-10"> 
           <div class="header_info">
             <div class="header_widgets">
@@ -71,9 +71,9 @@ foreach($results as $result)
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           <li><a href="home.php">Promotions</a></li>
-          <li><a href="car-listing.php">Shop Now</a>
+          <li><a href="shop.php">Shop Now</a>
           <li><a href="car-listing.php">Memberships</a>
-          <li><a href="car-listing.php">Hire Me!</a>
+          <li><a href="HireMe.php">Hire Me!</a>
           <li><a href="page.php?type=aboutus">About Us</a></li>
 
           <!-- <li><a href="page.php?type=faqs">Assignment 1</a></li> -->

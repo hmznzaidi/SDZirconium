@@ -8,7 +8,7 @@
           <ul>
             <li><a href="page.php?type=aboutus">About us</a></li>
             <li><a href="admin/">Admin Login</a></li>
-            <li><a href="admin/">Courier Login</a></li>
+            <li><a href="Courier/home.php">Courier Login</a></li>
           </ul>
         </div>
 

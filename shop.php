@@ -2,6 +2,7 @@
 session_start();
 include('includes/config.php');
 error_reporting(0);
+
 ?>
 
 <!DOCTYPE HTML>
@@ -12,22 +13,16 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Zirconium Memberships</title>
+<title>Shop Now!</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
-<!--Custome Style -->
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-<!--OWL Carousel slider-->
 <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
 <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
-<!--slick-slider -->
 <link href="assets/css/slick.css" rel="stylesheet">
-<!--bootstrap-slider -->
 <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
-<!--FontAwesome Font Style -->
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-<!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
@@ -39,27 +34,41 @@ error_reporting(0);
 
 <!--Header-->
 <?php include('includes/header.php');?>
+<!-- /Header -->
 
-<!--Page Header-->
-<section class="page-header listing_page">
+<!-- Banners -->
+<!-- /Banners -->
+
+<!-- Resent Cat-->
+<section class="section-padding gray-bg">
   <div class="container">
-    <div class="page-header_wrap">
-      <div class="page-heading">
-        <h1>Memberships</h1>
+    <div class="section-header text-center">
+
+      <h2><span>Shop Now!</span></h2>
+      <p>from your selected companies.</p>
+    </div>
+    <div class="row">
+
+      <!-- Nav tabs -->
+      <div class="recent-tab">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Companies</a></li>
+        </ul>
       </div>
-      <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li>Memberships</li>
-      </ul>
+
+
+      </div>
     </div>
   </div>
-  <!-- Dark Overlay-->
-  <div class="dark-overlay"></div>
+  <div class="section-header text-center">
+  <br><br><br><br>
+  <h1 >Important Notice!</h1>
+		<p1>If you have any symtoms like fever, flu, cough, running nose,<br>
+		diarrhea or in close contact with persons with covid-19 or under <br>
+		investigation. Please Do Not Enter!. You are prohibited from entering the gym.	</p1>
+</div>
 </section>
 
-<!--Table-->
-<?php include('includes/table.php');?>
-  
 <!--Footer -->
 <?php include('includes/footer.php');?>
 
@@ -79,8 +88,6 @@ error_reporting(0);
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/interface.js"></script>
-<!--Switcher-->
-<script src="assets/switcher/js/switcher.js"></script>
 <!--bootstrap-slider-JS-->
 <script src="assets/js/bootstrap-slider.min.js"></script>
 <!--Slider-JS-->

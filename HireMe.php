@@ -12,7 +12,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Zirconium Memberships</title>
+<title>Recruitment</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -45,11 +45,11 @@ error_reporting(0);
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
-        <h1>Memberships</h1>
+        <h1>Recruitment</h1>
       </div>
       <ul class="coustom-breadcrumb">
         <li><a href="#">Home</a></li>
-        <li>Memberships</li>
+        <li>Recruitment</li>
       </ul>
     </div>
   </div>
@@ -58,7 +58,7 @@ error_reporting(0);
 </section>
 
 <!--Table-->
-<?php include('includes/table.php');?>
+<?php include('includes/Recruitment.php');?>
   
 <!--Footer -->
 <?php include('includes/footer.php');?>
