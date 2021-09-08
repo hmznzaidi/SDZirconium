@@ -27,12 +27,24 @@
 				<span class="badge badge-pill badge-danger notify">0</span>
 			</div>
 			<div class="widget-header icontext">
-				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
+      <?php
+        if (isset($_SESSION["user_id"])) {
+				echo "<a href='profile.php' class='icon icon-sm rounded-circle border'><i class='fa fa-user'> </i></a>";
+      }else{
+      }
+        ?>
 				<div class="text">
 					<span class="text-muted">Welcome!</span>
 					<div> 
-						<a href="login.php">Sign in</a> |  
-						<a href="signup.php"> Register</a>
+          <?php
+            if (isset($_SESSION["user_id"])) {
+             // echo "<li><a href='profile.php'> Profile</a></li>";
+              echo "<li><a href='logout.php'> Log Out</a></li>";
+            }else{
+              echo "<li><a href='login.php'> Sign in</a></li>";
+              echo "<li><a href='signup.php'> Register</a></li>";
+            }
+        ?>
 					</div>
 				</div>
 			</div>
