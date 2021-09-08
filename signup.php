@@ -21,7 +21,7 @@ session_start();
         {
             //save to database
             $user_id = random_num(20);
-            $query = "insert into users (user_id,user_name,password,city,country,gender,first_name,last_name) values ('$user_id','$user_name','$password','$city','country','gender','first_name','last_name')";
+            $query = "insert into users (user_id,user_name,password,city,country,gender,first_name,last_name) values ('$user_id','$user_name','$password','$city','$country','$gender','$first_name','$last_name')";
 
             mysqli_query($con, $query);
 
@@ -157,11 +157,11 @@ $(document).ready(function() {
 				</div> <!-- form-group end.// -->
 				<div class="form-group">
 					<label class="custom-control custom-radio custom-control-inline">
-					  <input class="custom-control-input" checked="" type="radio" name="gender" value="option1">
+					  <input class="custom-control-input" checked="" type="radio" name="gender" value="male">
 					  <span class="custom-control-label"> Male </span>
 					</label>
 					<label class="custom-control custom-radio custom-control-inline">
-					  <input class="custom-control-input" type="radio" name="gender" value="option2">
+					  <input class="custom-control-input" type="radio" name="gender" value="female">
 					  <span class="custom-control-label"> Female </span>
 					</label>
 				</div> <!-- form-group end.// -->
