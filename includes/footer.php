@@ -35,10 +35,11 @@
 				<aside class="col-md col-6">
 					<h6 class="title">Account</h6>
 					<ul class="list-unstyled">
-						<li> <a href="#"> User Login </a></li>
-						<li> <a href="#"> User register </a></li>
-						<li> <a href="#"> Account Setting </a></li>
+						<li> <a href="login.php"> Login </a></li>
+						<li> <a href="signup.php"> Register </a></li>
+						<li> <a href="#"> View Profile </a></li>
 						<li> <a href="#"> My Orders </a></li>
+						<li> <a href="#"> Admin Login </a></li>
 					</ul>
 				</aside>
 				<aside class="col-md">

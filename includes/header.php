@@ -4,8 +4,8 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-4">
-		<a href="http://bootstrap-ecommerce.com" class="brand-wrap">
-			<img class="logo" src="images/logo.png">
+		<a href="images/logos/Logo.png" class="brand-wrap">
+			<img class="logo" src="images/logos/Logo.png">
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-6 col-sm-12">
@@ -54,38 +54,36 @@
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav">
       	<li class="nav-item dropdown">
-           <a class="nav-link" href="#">Home</a>
+           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="aboutus.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Supermarket</a>
+          <a class="nav-link" href="memberships.php">Memberships</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Partnership</a>
+          <a class="nav-link" href="#">Promotions</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Baby &amp Toys</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Fitness sport</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Clothing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Furnitures</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="supermarket.php">Supermarket</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="supermarket.php">All Groceries</a>
+            <a class="dropdown-item" href="#">Frozen</a>
+            <a class="dropdown-item" href="#">Fresh Products</a>
+            <a class="dropdown-item" href="#">Confectioneries</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> More</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Foods and Drink</a>
-            <a class="dropdown-item" href="#">Home interior</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Category 1</a>
-            <a class="dropdown-item" href="#">Category 2</a>
-            <a class="dropdown-item" href="#">Category 3</a>
+            <a class="dropdown-item" href="#">Health & Beauty</a>
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Sports & Lifestyle</a>
+            <a class="dropdown-item" href="#">Babies & Toys</a>
+            <a class="dropdown-item" href="#">Books</a>
+            <a class="dropdown-item" href="#">Appliances</a>
+            <a class="dropdown-item" href="#">Automotive & Motocycles</a>
           </div>
         </li>
       </ul>

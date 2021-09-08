@@ -63,13 +63,13 @@ $(document).ready(function() {
 	<aside class="col-md-3">
 		<nav class="card">
 			<ul class="menu-category">
-				<li><a href="#">Best clothes</a></li>
-				<li><a href="#">Automobiles</a></li>
-				<li><a href="#">Home interior</a></li>
-				<li><a href="#">Electronics</a></li>
-				<li><a href="#">Technologies</a></li>
+				<li><a href="#">Best Clothes</a></li>
+				<li><a href="#">Fresh Groceries</a></li>
+				<li><a href="#">Health & Beauty</a></li>
+				<li><a href="#">Appliances</a></li>
+				<li><a href="#">Promotions</a></li>
 				<li><a href="#">Digital goods</a></li>
-				<li class="has-submenu"><a href="#">More items</a>
+				<li class="has-submenu"><a href="#">Brands</a>
 					<ul class="submenu">
 						<li><a href="#">Submenu name</a></li>
 						<li><a href="#">Great submenu</a></li>
