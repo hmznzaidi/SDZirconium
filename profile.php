@@ -10,6 +10,25 @@ session_start();
     
 <?php include('includes/header.php') ?>
 
+<?php
+$records = mysqli_query($con,"select * from users"); // fetch data from database
+
+while($data = mysqli_fetch_array($records))
+{
+?>
+
+<?php$_SESSION["user_id"] = $user_id;?>
+
+  
+    <td><?php echo $data['user_id']; ?></td>
+    <td><?php echo $data['user_name']; ?></td>
+    <td><?php echo $data['city']; ?></td>
+
+
+<?php
+}
+?>
+</table>
 
 <!DOCTYPE HTML>
 <html lang="en">
