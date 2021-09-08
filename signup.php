@@ -9,12 +9,19 @@ session_start();
         //something was posted
         $user_name = $_POST['user_name'];
         $password = $_POST['password'];
+		$city = $_POST['city'];
+		$country = $_POST['country'];
+		$gender = $_POST['gender'];
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
 
-        if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+
+
+        if(!empty($user_name) && !empty($password) && !is_numeric($user_name) )
         {
             //save to database
             $user_id = random_num(20);
-            $query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+            $query = "insert into users (user_id,user_name,password,city,country,gender,first_name,last_name) values ('$user_id','$user_name','$password','$city','country','gender','first_name','last_name')";
 
             mysqli_query($con, $query);
 
@@ -131,11 +138,11 @@ $(document).ready(function() {
 				<div class="form-row">
 					<div class="col form-group">
 						<label>First name</label>
-					  	<input type="text" class="form-control" placeholder="First Name">
+					  	<input type="text" class="form-control" placeholder="First Name" name="first_name">
 					</div> <!-- form-group end.// -->
 					<div class="col form-group">
 						<label>Last name</label>
-					  	<input type="text" class="form-control" placeholder="Last Name">
+					  	<input type="text" class="form-control" placeholder="Last Name" name="last_name">
 					</div> <!-- form-group end.// -->
 				</div> <!-- form-row end.// -->
                 <div class="form-group">
@@ -161,11 +168,11 @@ $(document).ready(function() {
 				<div class="form-row">
 					<div class="form-group col-md-6">
 					  <label>City</label>
-					  <input type="text" class="form-control">
+					  <input type="text" class="form-control" name="city">
 					</div> <!-- form-group end.// -->
 					<div class="form-group col-md-6">
 					  <label>Country</label>
-					  <select id="inputState" class="form-control">
+					  <select id="inputState" class="form-control" name="country">
 					    <option> Choose...</option>
                           <option>Indoneisa</option>
 					      <option>Russia</option>
