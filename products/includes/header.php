@@ -4,8 +4,8 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-4">
-		<a href="images/logos/Logo.png" class="brand-wrap">
-			<img class="logo" src="images/logos/Logo.png">
+		<a href="../images/logos/Logo.png" class="brand-wrap">
+			<img class="logo" src="../images/logos/Logo.png">
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-6 col-sm-12">
@@ -66,24 +66,24 @@
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav">
       	<li class="nav-item dropdown">
-           <a class="nav-link" href="index.php">Home</a>
+           <a class="nav-link" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.php">About Us</a>
+          <a class="nav-link" href="../../aboutus.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="memberships.php">Memberships</a>
+          <a class="nav-link" href="../../memberships.php">Memberships</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Promotions</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="supermarket.php">Supermarket</a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../supermarket.php">Supermarket</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="supermarket.php">All Groceries</a>
-            <a class="dropdown-item" href="products/frozen.php">Frozen</a>
-            <a class="dropdown-item" href="freshproducts.php">Fresh Products</a>
-            <a class="dropdown-item" href="confectioneries.php">Confectioneries</a>
+            <a class="dropdown-item" href="../supermarket.php">All Groceries</a>
+            <a class="dropdown-item" href="../frozen.php">Frozen</a>
+            <a class="dropdown-item" href="../freshproducts.php">Fresh Products</a>
+            <a class="dropdown-item" href="../confectioneries.php">Confectioneries</a>
           </div>
         </li>
         <li class="nav-item dropdown">
