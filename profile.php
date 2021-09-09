@@ -10,25 +10,7 @@ session_start();
     
 <?php include('includes/header.php') ?>
 
-<?php
-$records = mysqli_query($con,"select * from users"); // fetch data from database
 
-while($data = mysqli_fetch_array($records))
-{
-?>
-
-<?php$_SESSION["user_id"] = $user_id;?>
-
-  
-    <td><?php echo $data['user_id']; ?></td>
-    <td><?php echo $data['user_name']; ?></td>
-    <td><?php echo $data['city']; ?></td>
-
-
-<?php
-}
-?>
-</table>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -75,7 +57,29 @@ $(document).ready(function() {
 
 
 
+<?php
 
+
+	$user_id = $_SESSION['user_id'];
+	$sql = "SELECT *FROM users WHERE user_id = '$user_id'; ";
+	$result = mysqli_query($con, $sql);
+	
+	if(mysqli_num_rows($result) > 0)
+	{
+		foreach($result as $row)
+		{
+			 $row['user_name'];
+			 $row['country'];
+		}
+	}
+	else
+	{
+		echo "no record found";
+	}
+
+	$user_name = $row['user_name'];
+	
+?>
 
 <!-- ========================= SECTION PAGETOP ========================= -->
 <section class="section-pagetop bg">
@@ -84,6 +88,7 @@ $(document).ready(function() {
 </div> <!-- container //  -->
 </section>
 <!-- ========================= SECTION INTRO END// ========================= -->
+
 
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y">
@@ -104,23 +109,23 @@ $(document).ready(function() {
 	<main class="col-md-9">
 
 		<article class="card mb-3">
-			<div class="card-body">
-				
+			<div class="card-body">				
 				<figure class="icontext">
-						<div class="icon">
-							<img class="rounded-circle img-sm border" src="images/avatars/avatar3.jpg">
-						</div>
-						<div class="text">
-							<strong> Mr. Jackson Someone </strong> <br> 
-							myloginname@gmail.com <br> 
+						<div class="text" >
+							<strong><?php echo $row['user_name'];?> </strong> <br> 
+							<?php echo $row['gender'];?> <br> 
 							<a href="#">Edit</a>
 						</div>
 				</figure>
 				<hr>
 				<p>
-					<i class="fa fa-map-marker text-muted"></i> &nbsp; My address:  
+					<i class="fa fa-map-marker text-muted"></i> &nbsp; Location  
 					 <br>
-					Tashkent city, Street name, Building 123, House 321 &nbsp 
+					 <?php echo $row['country'];?>  
+					 <br>
+					 <?php echo $row['city'];?> 
+					 <br> 
+
 					<a href="#" class="btn-link"> Edit</a>
 				</p>
 
