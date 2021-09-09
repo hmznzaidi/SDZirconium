@@ -151,7 +151,7 @@ $(document).ready(function() {
 			 <input id="text" type="text" name="user_name" class="form-control" placeholder="Username">
           </div> <!-- form-group// -->
           <div class="form-group">
-			<input id="text" type="text" name="password" class="form-control" placeholder="Password" >
+			<input id="text" type="password" name="password" class="form-control" placeholder="Password" >
           </div> <!-- form-group// -->
           
           <div class="form-group">

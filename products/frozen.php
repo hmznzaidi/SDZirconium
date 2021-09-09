@@ -52,8 +52,8 @@ $(document).ready(function() {
 	<h2 class="title-page">Category products</h2>
 	<nav>
 	<ol class="breadcrumb text-white">
-	    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-	    <li class="breadcrumb-item"><a href="supermarket.php">Supermarket</a></li>
+	    <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+	    <li class="breadcrumb-item"><a href="../supermarket.php">Supermarket</a></li>
 	    <li class="breadcrumb-item active" aria-current="page">Frozen</li>
 	</ol>  
 	</nav>
@@ -110,7 +110,7 @@ $(document).ready(function() {
 			<div class="card-body">
 				<label class="custom-control custom-checkbox">
 				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Kanika Malaysia  
+				  <div class="custom-control-label">Regal Salmon
 				  	<b class="badge badge-pill badge-light float-right">1</b>  </div>
 	</div> <!-- card-body.// -->
 		</div>
@@ -264,7 +264,7 @@ $(document).ready(function() {
 				<p class="text-success">Free shipping</p>
 				<br>
 				<p>
-					<a href="#" class="btn btn-primary btn-block"> Details </a>
+					<a href="frozen/salmon.php" class="btn btn-primary btn-block"> Details </a>
 					<a href="#" class="btn btn-light btn-block"><i class="fa fa-heart"></i> 
 						<span class="text">Add to wishlist</span>
 					</a>

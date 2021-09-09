@@ -41,8 +41,8 @@
              
               echo "<li><a href='logout.php'> Log Out</a></li>";
             }else{
-              echo "<li><a href='login.php'> Sign in</a></li>";
-              echo "<li><a href='signup.php'> Register</a></li>";
+              echo "<li><a href='../../includes/login.php'> Sign in</a></li>";
+              echo "<li><a href='../../includes/signup.php'> Register</a></li>";
             }
         ?>
 					</div>
@@ -66,13 +66,13 @@
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav">
       	<li class="nav-item dropdown">
-           <a class="nav-link" href="../../index.php">Home</a>
+           <a class="nav-link" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../aboutus.php">About Us</a>
+          <a class="nav-link" href="../aboutus.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../memberships.php">Memberships</a>
+          <a class="nav-link" href="../memberships.php">Memberships</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Promotions</a>
@@ -81,7 +81,7 @@
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../supermarket.php">Supermarket</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="../supermarket.php">All Groceries</a>
-            <a class="dropdown-item" href="../frozen.php">Frozen</a>
+            <a class="dropdown-item" href="frozen.php">Frozen</a>
             <a class="dropdown-item" href="../freshproducts.php">Fresh Products</a>
             <a class="dropdown-item" href="../confectioneries.php">Confectioneries</a>
           </div>
