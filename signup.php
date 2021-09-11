@@ -138,13 +138,13 @@ $(document).ready(function() {
 				<div class="form-row">
 					<div class="col form-group">
 						<label>Full Name</label>
-					  	<input type="text" class="form-control" placeholder="Full Name" name="full_name">
+					  	<input type="text" class="form-control" placeholder="Full Name" name="full_name" >
 					</div> <!-- form-group end.// -->
 					
 				</div> <!-- form-row end.// -->
                 <div class="form-group">
 					<label>Username</label>
-					<input id="text" type="text" class="form-control" placeholder="Username" name="user_name">
+					<input id="text" type="text" class="form-control" placeholder="Username" name="user_name" >
 					<small class="form-text text-muted">Please enter your username.</small>
 				</div> <!-- form-group end.// -->
 				<div class="form-group">
@@ -165,11 +165,11 @@ $(document).ready(function() {
 				<div class="form-row">
 					<div class="form-group col-md-6">
 					  <label>City</label>
-					  <input type="text" class="form-control" name="city">
+					  <input type="text" class="form-control" name="city" >
 					</div> <!-- form-group end.// -->
 					<div class="form-group col-md-6">
 					  <label>Country</label>
-					  <select id="inputState" class="form-control" name="country">
+					  <select id="inputState" class="form-control" name="country" >
 					    <option> Choose...</option>
                           <option>Indoneisa</option>
 					      <option>Russia</option>

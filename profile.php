@@ -5,10 +5,27 @@ session_start();
     include("functions.php");
 
     $user_data = check_login($con);
-
 ?>
     
-<?php include('includes/header.php') ?>
+<?php
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT *FROM users WHERE user_id = '$user_id'; ";
+$result = mysqli_query($con, $sql);
+if(mysqli_num_rows($result) > 0)
+{
+	foreach($result as $row)
+	{
+		
+	}
+}
+else
+{
+	echo "no record found";
+}
+
+?>
+
+
 
 
 
@@ -19,6 +36,8 @@ session_start();
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="max-age=604800" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
 
 <title>Website title - bootstrap html template</title>
 
@@ -33,6 +52,16 @@ session_start();
 
 <!-- Font awesome 5 -->
 <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet"> 
+
+<style>
+
+
+
+
+</style>
 
 <!-- custom style -->
 <link href="css/ui.css" rel="stylesheet" type="text/css"/>
@@ -56,38 +85,16 @@ $(document).ready(function() {
 <body>
 
 
-
-<?php
-
-
-	$user_id = $_SESSION['user_id'];
-	$sql = "SELECT *FROM users WHERE user_id = '$user_id'; ";
-	$result = mysqli_query($con, $sql);
-	
-	if(mysqli_num_rows($result) > 0)
-	{
-		foreach($result as $row)
-		{
-			 $row['user_name'];
-			 $row['country'];
-		}
-	}
-	else
-	{
-		echo "no record found";
-	}
-
-	$user_name = $row['user_name'];
-	
-?>
+<?php include('includes/header.php') ?>
 
 <!-- ========================= SECTION PAGETOP ========================= -->
-<section class="section-pagetop bg">
-<div class="container">
-	<h2 class="title-page">My account</h2>
+<section class="section-pagetop bg-primary">
+<div class="container" >
+	<h2 class="title-page text-white" style="font-family:Roboto; text-transform: uppercase">my profile</h2>
 </div> <!-- container //  -->
 </section>
 <!-- ========================= SECTION INTRO END// ========================= -->
+
 
 
 <!-- ========================= SECTION CONTENT ========================= -->
@@ -108,18 +115,22 @@ $(document).ready(function() {
 	</aside> <!-- col.// -->
 	<main class="col-md-9">
 
-		<article class="card mb-3">
+		<article class="card mb-3" style="background-color:#eaf0fd">
 			<div class="card-body">				
 				<figure class="icontext">
-						<div class="text" >
-							<strong><?php echo $row['user_name'];?> </strong> <br> 
-							<?php echo $row['gender'];?> <br> 
-							<a href="#">Edit</a>
+						<div class="text" style="font-family:Noto Sans JP" >
+						<h1 style="text-transform: capitalize; font-size:25px" ><strong><?php echo $row['full_name'];?></strong><br></h1>
+
+						<p style="font-size:17px"><?php echo $row['user_name'];?> 
+						<br>  
+						<?php echo $row['gender'];?> <br> 
+						</p>	
 						</div>
+
 				</figure>
 				<hr>
-				<p>
-					<i class="fa fa-map-marker text-muted"></i> &nbsp; Location  
+				<p style="font-family:Noto Sans JP; text-transform: capitalize;font-size:17px">
+					<strong>Location:</strong> 
 					 <br>
 					 <?php echo $row['country'];?>  
 					 <br>
@@ -131,26 +142,26 @@ $(document).ready(function() {
 
 				
 
-				<article class="card-group">
-					<figure class="card bg">
+				<article class="card-group" >
+					<figure class="card bg" style="background-color:#eaf0fd">
 						<div class="p-3">
-							 <h5 class="card-title">38</h5>
+							 <h5 class="card-title" >38</h5>
 							<span>Orders</span>
 						</div>
 					</figure>
-					<figure class="card bg">
+					<figure class="card bg" style="background-color:#eaf0fd">
 						<div class="p-3">
 							 <h5 class="card-title">5</h5>
 							<span>Wishlists</span>
 						</div>
 					</figure>
-					<figure class="card bg">
+					<figure class="card bg" style="background-color:#eaf0fd">
 						<div class="p-3">
 							 <h5 class="card-title">12</h5>
 							<span>Awaiting delivery</span>
 						</div>
 					</figure>
-					<figure class="card bg">
+					<figure class="card bg" style="background-color:#eaf0fd">
 						<div class="p-3">
 							 <h5 class="card-title">50</h5>
 							<span>Delivered items</span>
@@ -228,4 +239,6 @@ $(document).ready(function() {
 
 </body>
 </html>
+
+
 

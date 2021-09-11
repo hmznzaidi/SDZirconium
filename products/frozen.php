@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+    include("../connection.php");
+    include("../functions.php");
+
+    $user_data = check_login($con);
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -42,7 +52,7 @@ $(document).ready(function() {
 // jquery end
 </script>
 
-<?php include_once('includes/header.php') ?>
+<?php include("../includes/header.php") ?>
 
 
 
