@@ -12,8 +12,8 @@ session_start();
 		$city = $_POST['city'];
 		$country = $_POST['country'];
 		$gender = $_POST['gender'];
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
+		$full_name = $_POST['full_name'];
+		$email = $_POST['email'];
 
 
 
@@ -21,7 +21,7 @@ session_start();
         {
             //save to database
             $user_id = random_num(20);
-            $query = "insert into users (user_id,user_name,password,city,country,gender,first_name,last_name) values ('$user_id','$user_name','$password','$city','$country','$gender','$first_name','$last_name')";
+            $query = "insert into users (user_id,user_name,password,city,country,gender,full_name,email) values ('$user_id','$user_name','$password','$city','$country','$gender','$full_name','$email')";
 
             mysqli_query($con, $query);
 
@@ -137,13 +137,10 @@ $(document).ready(function() {
 		<form method="post">
 				<div class="form-row">
 					<div class="col form-group">
-						<label>First name</label>
-					  	<input type="text" class="form-control" placeholder="First Name" name="first_name">
+						<label>Full Name</label>
+					  	<input type="text" class="form-control" placeholder="Full Name" name="full_name">
 					</div> <!-- form-group end.// -->
-					<div class="col form-group">
-						<label>Last name</label>
-					  	<input type="text" class="form-control" placeholder="Last Name" name="last_name">
-					</div> <!-- form-group end.// -->
+					
 				</div> <!-- form-row end.// -->
                 <div class="form-group">
 					<label>Username</label>
