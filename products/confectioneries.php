@@ -7,7 +7,6 @@ session_start();
     $user_data = check_login($con);
 ?>
 
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -16,7 +15,7 @@ session_start();
 <meta http-equiv="cache-control" content="max-age=604800" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Zirconium - Frozen</title>
+<title>Website title - bootstrap html template</title>
 
 <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -52,7 +51,7 @@ $(document).ready(function() {
 // jquery end
 </script>
 
-<?php include("includes/header.php") ?>
+<?php include('includes/header.php') ?>
 
 
 
@@ -62,9 +61,9 @@ $(document).ready(function() {
 	<h2 class="title-page">Category products</h2>
 	<nav>
 	<ol class="breadcrumb text-white">
-	    <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
-	    <li class="breadcrumb-item"><a href="../supermarket.php">Supermarket</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Frozen</li>
+	    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+	    <li class="breadcrumb-item"><a href="supermarket.php">Supermarket</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">All Groceries</li>
 	</ol>  
 	</nav>
 </div> <!-- container //  -->
@@ -98,12 +97,13 @@ $(document).ready(function() {
 				</form>
 				
 				<ul class="list-menu">
-				<li><a href="#">Fish  </a></li>
-				<li><a href="#">Crab </a></li>
-				<li><a href="#">Lobster  </a></li>
-				<li><a href="#">Octopus  </a></li>
-				<li><a href="#">Abalone </a></li>
-				<li><a href="#">Oyster</a></li>
+				<li><a href="#">People  </a></li>
+				<li><a href="#">Watches </a></li>
+				<li><a href="#">Cinema  </a></li>
+				<li><a href="#">Clothes  </a></li>
+				<li><a href="#">Home items </a></li>
+				<li><a href="#">Animals</a></li>
+				<li><a href="#">People </a></li>
 				</ul>
 
 			</div> <!-- card-body.// -->
@@ -120,8 +120,29 @@ $(document).ready(function() {
 			<div class="card-body">
 				<label class="custom-control custom-checkbox">
 				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Regal Salmon
-				  	<b class="badge badge-pill badge-light float-right">1</b>  </div>
+				  <div class="custom-control-label">Mercedes  
+				  	<b class="badge badge-pill badge-light float-right">120</b>  </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" checked="" class="custom-control-input">
+				  <div class="custom-control-label">Toyota 
+				  	<b class="badge badge-pill badge-light float-right">15</b>  </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" checked="" class="custom-control-input">
+				  <div class="custom-control-label">Mitsubishi 
+				  	<b class="badge badge-pill badge-light float-right">35</b> </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" checked="" class="custom-control-input">
+				  <div class="custom-control-label">Nissan 
+				  	<b class="badge badge-pill badge-light float-right">89</b> </div>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input">
+				  <div class="custom-control-label">Honda 
+				  	<b class="badge badge-pill badge-light float-right">30</b>  </div>
+				</label>
 	</div> <!-- card-body.// -->
 		</div>
 	</article> <!-- filter-group .// -->
@@ -138,11 +159,11 @@ $(document).ready(function() {
 				<div class="form-row">
 				<div class="form-group col-md-6">
 				  <label>Min</label>
-				  <input class="form-control" placeholder="RM0" type="number">
+				  <input class="form-control" placeholder="$0" type="number">
 				</div>
 				<div class="form-group text-right col-md-6">
 				  <label>Max</label>
-				  <input class="form-control" placeholder="RM1,0000" type="number">
+				  <input class="form-control" placeholder="$1,0000" type="number">
 				</div>
 				</div> <!-- form-row.// -->
 				<button class="btn btn-block btn-primary">Apply</button>
@@ -240,15 +261,15 @@ $(document).ready(function() {
 		<aside class="col-md-3">
 			<a href="#" class="img-wrap">
 				<span class="badge badge-danger"> NEW </span>
-				<img src="images/items/frozen/salmon.jpg">
+				<img src="images/items/3.jpg">
 			</a>
 		</aside> <!-- col.// -->
 		<div class="col-md-6">
 			<div class="info-main">
-				<a href="frozen/salmon.php" class="h5 title"> Salmon King </a>
+				<a href="#" class="h5 title"> Great product name goes here  </a>
 				<div class="rating-wrap mb-3">
 					<ul class="rating-stars">
-						<li style="width:100%" class="stars-active"> 
+						<li style="width:80%" class="stars-active"> 
 							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
 							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
 							<i class="fa fa-star"></i> 
@@ -259,22 +280,22 @@ $(document).ready(function() {
 							<i class="fa fa-star"></i> 
 						</li>
 					</ul>
-					<div class="label-rating">10/10</div>
+					<div class="label-rating">7/10</div>
 				</div> <!-- rating-wrap.// -->
 				
-				<p> Many consider it to be the best salmon you can buy. High in fat, rich, and large in size, King salmon (also known as Chinook) is loaded with omega-3s. </p>
+				<p> Take it as demo specs, ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam </p>
 			</div> <!-- info-main.// -->
 		</div> <!-- col.// -->
 		<aside class="col-sm-3">
 			<div class="info-aside">
 				<div class="price-wrap">
-					<span class="price h5"> RM140 </span>	
-					<del class="price-old"> RM198</del>
+					<span class="price h5"> $140 </span>	
+					<del class="price-old"> $198</del>
 				</div> <!-- info-price-detail // -->
 				<p class="text-success">Free shipping</p>
 				<br>
 				<p>
-					<a href="frozen/salmon.php" class="btn btn-primary btn-block"> Details </a>
+					<a href="#" class="btn btn-primary btn-block"> Details </a>
 					<a href="#" class="btn btn-light btn-block"><i class="fa fa-heart"></i> 
 						<span class="text">Add to wishlist</span>
 					</a>
@@ -442,7 +463,7 @@ $(document).ready(function() {
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 <!-- ========================= FOOTER ========================= -->
-<?php include_once('includes/footer.php') ?>
+<?php include('includes/footer.php') ?>
 <!-- ========================= FOOTER END // ========================= -->
 
 

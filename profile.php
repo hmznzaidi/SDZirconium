@@ -39,7 +39,7 @@ else
 
 
 
-<title>Website title - bootstrap html template</title>
+<title>Profile</title>
 
 <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
