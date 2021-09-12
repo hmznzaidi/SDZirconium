@@ -1,3 +1,31 @@
+<?php 
+session_start();
+
+    include("../../connection.php");
+    include("../../functions.php");
+
+    $user_data = check_login($con);
+?>
+    
+<?php
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT *FROM users WHERE user_id = '$user_id'; ";
+$result = mysqli_query($con, $sql);
+if(mysqli_num_rows($result) > 0)
+{
+	foreach($result as $row)
+	{
+		
+	}
+}
+else
+{
+	echo "no record found";
+}
+
+?>
+
+
 <header class="section-header">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +61,7 @@
 			<div class="widget-header icontext">
       <?php
         if (isset($_SESSION["user_id"])) {
-				echo "<a href='profile.php' class='icon icon-sm rounded-circle border'><i class='fa fa-user'> </i></a>";
+				echo "<a href='../../profile.php' class='icon icon-sm rounded-circle border'><i class='fa fa-user'> </i></a>";
       }else{
       }
         ?>
@@ -43,10 +71,10 @@
           <?php
             if (isset($_SESSION["user_id"])) {
              
-              echo "<p class='text' style='font-family: Noto Sans JP '><a href='logout.php'> Log Out</p></a>";
+              echo "<p class='text' style='font-family: Noto Sans JP '><a href='../../logout.php'> Log Out</p></a>";
             }else{
-              echo "<p style='font-family: Noto Sans JP '><a href='login.php'> Sign in</p>";
-              echo "<p style='font-family: Noto Sans JP '><a href='signup.php'> Register</p>";
+              echo "<p style='font-family: Noto Sans JP '><a href='../../login.php'> Sign in</p>";
+              echo "<p style='font-family: Noto Sans JP '><a href='../../signup.php'> Register</p>";
             }
         ?>
 					</div>
@@ -70,13 +98,13 @@
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav">
       	<li class="nav-item dropdown">
-           <a class="nav-link" href="index.php">Home</a>
+           <a class="nav-link" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.php">About Us</a>
+          <a class="nav-link" href="../../aboutus.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="memberships.php">Memberships</a>
+          <a class="nav-link" href="../../memberships.php">Memberships</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Promotions</a>
@@ -84,10 +112,10 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../supermarket.php">Supermarket</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="supermarket.php">All Groceries</a>
-            <a class="dropdown-item" href="products/frozen.php">Frozen</a>
-            <a class="dropdown-item" href="products/freshproducts.php">Fresh Products</a>
-            <a class="dropdown-item" href="products/confectioneries.php">Confectioneries</a>
+            <a class="dropdown-item" href="../../supermarket.php">All Groceries</a>
+            <a class="dropdown-item" href="../frozen.php">Frozen</a>
+            <a class="dropdown-item" href="../freshproducts.php">Fresh Products</a>
+            <a class="dropdown-item" href="../confectioneries.php">Confectioneries</a>
           </div>
         </li>
         <li class="nav-item dropdown">
